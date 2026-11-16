@@ -53,6 +53,10 @@ public class Jogo {
         return pontos;
     }
 
+    public boolean encerrado() {
+        return false;
+    }
+
     private boolean ehStrike(int indice) {
         return jogadas[indice] == 10;
     }
