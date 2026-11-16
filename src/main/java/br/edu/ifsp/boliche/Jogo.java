@@ -13,7 +13,10 @@ public class Jogo {
         int pontos = 0;
         int indice = 0;
         for (int frame = 0; frame < 10; frame++) {
-            if (ehSpare(indice)) {
+            if (ehStrike(indice)) {
+                pontos += 10 + bonusDoStrike(indice);
+                indice += 1;
+            } else if (ehSpare(indice)) {
                 pontos += 10 + bonusDoSpare(indice);
                 indice += 2;
             } else {
@@ -22,6 +25,14 @@ public class Jogo {
             }
         }
         return pontos;
+    }
+
+    private boolean ehStrike(int indice) {
+        return jogadas[indice] == 10;
+    }
+
+    private int bonusDoStrike(int indice) {
+        return jogadas[indice + 1] + jogadas[indice + 2];
     }
 
     private boolean ehSpare(int indice) {
