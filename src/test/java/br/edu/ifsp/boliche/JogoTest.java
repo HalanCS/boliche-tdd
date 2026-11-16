@@ -102,6 +102,24 @@ public class JogoTest {
         assertThrows(IllegalArgumentException.class, () -> jogo.jogar(6));
     }
 
+    @Test
+    void decimoFrameComDoisStrikesSeguidosPermiteQualquerValorNaTerceiraJogada() {
+        jogarVezes(18, 0);
+        jogo.jogar(10);
+        jogo.jogar(10);
+        jogo.jogar(7);
+        assertEquals(27, jogo.pontuacao());
+    }
+
+    @Test
+    void decimoFrameComSparePermiteDezNaTerceiraJogada() {
+        jogarVezes(18, 0);
+        jogo.jogar(5);
+        jogo.jogar(5);
+        jogo.jogar(10);
+        assertEquals(20, jogo.pontuacao());
+    }
+
     private void jogarStrike() {
         jogo.jogar(10);
     }
