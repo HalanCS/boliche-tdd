@@ -17,8 +17,8 @@ Legenda: `[ ]` pendente · `[x]` feito
 
 ## V1 – quantidade de pinos inválida
 
-- [ ] V1a. `jogar(-1)` → `IllegalArgumentException`
-- [ ] V1b. `jogar(11)` → `IllegalArgumentException`
+- [x] V1a. `jogar(-1)` → `IllegalArgumentException`
+- [x] V1b. `jogar(11)` → `IllegalArgumentException`
 
 ## V2 – soma do frame inválida
 
