@@ -30,9 +30,9 @@ Legenda: `[ ]` pendente · `[x]` feito
 
 ## V3 – fim da partida
 
-- [ ] V3a. `encerrado()` é `false` no início da partida
-- [ ] V3b. `encerrado()` é `true` após 20 jogadas sem strike/spare no 10º frame
-- [ ] V3c. Com spare no 10º frame, `encerrado()` só é `true` após a jogada extra
-- [ ] V3d. Com strike no 10º frame, `encerrado()` só é `true` após as duas jogadas extras
-- [ ] V3e. Jogada após o fim da partida → `IllegalStateException`
-- [ ] V3f. Jogada após as jogadas extras (ex.: após jogo perfeito) → `IllegalStateException`
+- [x] V3a. `encerrado()` é `false` no início da partida
+- [x] V3b. `encerrado()` é `true` após 20 jogadas sem strike/spare no 10º frame
+- [x] V3c. Com spare no 10º frame, `encerrado()` só é `true` após a jogada extra
+- [x] V3d. Com strike no 10º frame, `encerrado()` só é `true` após as duas jogadas extras
+- [x] V3e. Jogada após o fim da partida → `IllegalStateException`
+- [x] V3f. Jogada após as jogadas extras (ex.: após jogo perfeito) → `IllegalStateException`
