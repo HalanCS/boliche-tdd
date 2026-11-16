@@ -5,23 +5,29 @@ public class Jogo {
     private final int[] jogadas = new int[21];
     private int jogadaAtual = 0;
     private int frameAtual = 1;
-    private boolean primeiraJogadaDoFrame = true;
+    private int jogadaNoFrame = 1;
 
     public void jogar(int pinos) {
         if (pinos < 0 || pinos > 10) {
             throw new IllegalArgumentException("Quantidade de pinos deve estar entre 0 e 10: " + pinos);
         }
-        if (frameAtual < 10 && !primeiraJogadaDoFrame && jogadas[jogadaAtual - 1] + pinos > 10) {
+        if (frameAtual < 10 && jogadaNoFrame == 2 && jogadas[jogadaAtual - 1] + pinos > 10) {
             throw new IllegalArgumentException("Soma das jogadas do frame não pode exceder 10.");
+        }
+        if (frameAtual == 10 && jogadaNoFrame == 2 && jogadas[jogadaAtual - 1] < 10
+                && jogadas[jogadaAtual - 1] + pinos > 10) {
+            throw new IllegalArgumentException("Soma das duas primeiras jogadas do 10º frame sem strike não pode exceder 10.");
         }
         jogadas[jogadaAtual++] = pinos;
         if (frameAtual < 10) {
-            if (primeiraJogadaDoFrame && pinos < 10) {
-                primeiraJogadaDoFrame = false;
+            if (jogadaNoFrame == 1 && pinos < 10) {
+                jogadaNoFrame = 2;
             } else {
                 frameAtual++;
-                primeiraJogadaDoFrame = true;
+                jogadaNoFrame = 1;
             }
+        } else {
+            jogadaNoFrame++;
         }
     }
 
