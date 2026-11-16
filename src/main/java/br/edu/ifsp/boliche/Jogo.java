@@ -54,7 +54,15 @@ public class Jogo {
     }
 
     public boolean encerrado() {
-        return frameAtual == 10 && jogadaNoFrame > 2;
+        if (frameAtual < 10) {
+            return false;
+        }
+        if (jogadaNoFrame == 3) {
+            int primeira = jogadas[jogadaAtual - 2];
+            int segunda = jogadas[jogadaAtual - 1];
+            return primeira + segunda < 10;
+        }
+        return jogadaNoFrame > 3;
     }
 
     private boolean ehStrike(int indice) {
