@@ -6,8 +6,8 @@ public class Jogo {
     private int jogadaAtual = 0;
 
     public void jogar(int pinos) {
-        if (pinos < 0) {
-            throw new IllegalArgumentException("Quantidade de pinos não pode ser negativa: " + pinos);
+        if (pinos < 0 || pinos > 10) {
+            throw new IllegalArgumentException("Quantidade de pinos deve estar entre 0 e 10: " + pinos);
         }
         jogadas[jogadaAtual++] = pinos;
     }
