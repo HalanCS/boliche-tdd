@@ -133,6 +133,16 @@ public class JogoTest {
         assertTrue(jogo.encerrado());
     }
 
+    @Test
+    void comSpareNoDecimoFrameJogoSoEncerraAposJogadaExtra() {
+        jogarVezes(18, 0);
+        jogo.jogar(5);
+        jogo.jogar(5);
+        assertFalse(jogo.encerrado());
+        jogo.jogar(3);
+        assertTrue(jogo.encerrado());
+    }
+
     private void jogarStrike() {
         jogo.jogar(10);
     }
