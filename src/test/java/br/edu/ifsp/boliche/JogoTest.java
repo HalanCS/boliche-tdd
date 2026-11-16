@@ -154,6 +154,12 @@ public class JogoTest {
         assertTrue(jogo.encerrado());
     }
 
+    @Test
+    void jogarAposFimDaPartidaDeveLancarIllegalStateException() {
+        jogarVezes(20, 0);
+        assertThrows(IllegalStateException.class, () -> jogo.jogar(1));
+    }
+
     private void jogarStrike() {
         jogo.jogar(10);
     }
