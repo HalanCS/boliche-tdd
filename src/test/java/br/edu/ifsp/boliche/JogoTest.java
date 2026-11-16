@@ -42,11 +42,15 @@ public class JogoTest {
 
     @Test
     void partidaComUmStrikeSeguidoDe3E4DevePontuar24() {
-        jogo.jogar(10);
+        jogarStrike();
         jogo.jogar(3);
         jogo.jogar(4);
         jogarVezes(16, 0);
         assertEquals(24, jogo.pontuacao());
+    }
+
+    private void jogarStrike() {
+        jogo.jogar(10);
     }
 
     private void jogarSpare() {
