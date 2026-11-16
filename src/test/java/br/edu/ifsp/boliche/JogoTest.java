@@ -87,6 +87,13 @@ public class JogoTest {
         assertThrows(IllegalArgumentException.class, () -> jogo.jogar(4));
     }
 
+    @Test
+    void decimoFrameSemStrikeComSegundaJogadaExcedendo10DeveLancarIllegalArgumentException() {
+        jogarVezes(18, 0);
+        jogo.jogar(7);
+        assertThrows(IllegalArgumentException.class, () -> jogo.jogar(4));
+    }
+
     private void jogarStrike() {
         jogo.jogar(10);
     }
