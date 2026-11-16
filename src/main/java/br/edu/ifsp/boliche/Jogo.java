@@ -54,7 +54,7 @@ public class Jogo {
     }
 
     public boolean encerrado() {
-        return false;
+        return frameAtual == 10 && jogadaNoFrame > 2;
     }
 
     private boolean ehStrike(int indice) {
