@@ -31,4 +31,13 @@ public class JogoTest {
         jogarVezes(20, 1);
         assertEquals(20, jogo.pontuacao());
     }
+
+    @Test
+    void partidaComUmSpareSeguidoDe3DevePontuar16() {
+        jogo.jogar(5);
+        jogo.jogar(5);
+        jogo.jogar(3);
+        jogarVezes(17, 0);
+        assertEquals(16, jogo.pontuacao());
+    }
 }
