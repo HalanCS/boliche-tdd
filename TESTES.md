@@ -22,11 +22,11 @@ Legenda: `[ ]` pendente · `[x]` feito
 
 ## V2 – soma do frame inválida
 
-- [ ] V2a. Frames 1 a 9: 7 e depois 4 → `IllegalArgumentException`
-- [ ] V2b. 10º frame sem strike: 7 e depois 4 → `IllegalArgumentException`
-- [ ] V2c. 10º frame com strike e 2ª jogada ≠ 10: 10, 5, 6 → `IllegalArgumentException`
-- [ ] V2d. 10º frame com strike: 10, 10, qualquer valor é aceito (ex.: 10, 10, 7)
-- [ ] V2e. 10º frame com spare: a 3ª jogada pode ser qualquer valor (ex.: 5, 5, 10)
+- [x] V2a. Frames 1 a 9: 7 e depois 4 → `IllegalArgumentException`
+- [x] V2b. 10º frame sem strike: 7 e depois 4 → `IllegalArgumentException`
+- [x] V2c. 10º frame com strike e 2ª jogada ≠ 10: 10, 5, 6 → `IllegalArgumentException`
+- [x] V2d. 10º frame com strike: 10, 10, qualquer valor é aceito (ex.: 10, 10, 7)
+- [x] V2e. 10º frame com spare: a 3ª jogada pode ser qualquer valor (ex.: 5, 5, 10)
 
 ## V3 – fim da partida
 
