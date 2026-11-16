@@ -1,6 +1,7 @@
 package br.edu.ifsp.boliche;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -68,6 +69,11 @@ public class JogoTest {
             jogo.jogar(pinos);
         }
         assertEquals(167, jogo.pontuacao());
+    }
+
+    @Test
+    void jogarQuantidadeNegativaDePinosDeveLancarIllegalArgumentException() {
+        assertThrows(IllegalArgumentException.class, () -> jogo.jogar(-1));
     }
 
     private void jogarStrike() {
