@@ -34,10 +34,14 @@ public class JogoTest {
 
     @Test
     void partidaComUmSpareSeguidoDe3DevePontuar16() {
-        jogo.jogar(5);
-        jogo.jogar(5);
+        jogarSpare();
         jogo.jogar(3);
         jogarVezes(17, 0);
         assertEquals(16, jogo.pontuacao());
+    }
+
+    private void jogarSpare() {
+        jogo.jogar(5);
+        jogo.jogar(5);
     }
 }
