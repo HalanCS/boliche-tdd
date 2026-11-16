@@ -3,6 +3,7 @@ package br.edu.ifsp.boliche;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -124,6 +125,12 @@ public class JogoTest {
     @Test
     void jogoRecemIniciadoNaoDeveEstarEncerrado() {
         assertFalse(jogo.encerrado());
+    }
+
+    @Test
+    void jogoDeveEstarEncerradoApos20JogadasSemStrikeOuSpareNoDecimoFrame() {
+        jogarVezes(20, 1);
+        assertTrue(jogo.encerrado());
     }
 
     private void jogarStrike() {
