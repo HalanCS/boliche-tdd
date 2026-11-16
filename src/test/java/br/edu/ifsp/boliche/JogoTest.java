@@ -49,6 +49,27 @@ public class JogoTest {
         assertEquals(24, jogo.pontuacao());
     }
 
+    @Test
+    void partidaComSpareEmTodosOsFramesDevePontuar150() {
+        jogarVezes(21, 5);
+        assertEquals(150, jogo.pontuacao());
+    }
+
+    @Test
+    void jogoPerfeitoCom12StrikesDevePontuar300() {
+        jogarVezes(12, 10);
+        assertEquals(300, jogo.pontuacao());
+    }
+
+    @Test
+    void partidaMistaDevePontuar167() {
+        int[] jogadas = {10, 7, 3, 9, 0, 10, 0, 8, 8, 2, 0, 6, 10, 10, 10, 8, 1};
+        for (int pinos : jogadas) {
+            jogo.jogar(pinos);
+        }
+        assertEquals(167, jogo.pontuacao());
+    }
+
     private void jogarStrike() {
         jogo.jogar(10);
     }
