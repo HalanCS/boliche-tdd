@@ -8,6 +8,9 @@ public class Jogo {
     private int jogadaNoFrame = 1;
 
     public void jogar(int pinos) {
+        if (encerrado()) {
+            throw new IllegalStateException("A partida já foi encerrada.");
+        }
         if (pinos < 0 || pinos > 10) {
             throw new IllegalArgumentException("Quantidade de pinos deve estar entre 0 e 10: " + pinos);
         }
