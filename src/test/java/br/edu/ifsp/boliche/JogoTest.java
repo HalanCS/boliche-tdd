@@ -160,6 +160,13 @@ public class JogoTest {
         assertThrows(IllegalStateException.class, () -> jogo.jogar(1));
     }
 
+    @Test
+    void jogarAposJogadasExtrasDoJogoPerfeitoDeveLancarIllegalStateException() {
+        jogarVezes(12, 10);
+        assertTrue(jogo.encerrado());
+        assertThrows(IllegalStateException.class, () -> jogo.jogar(10));
+    }
+
     private void jogarStrike() {
         jogo.jogar(10);
     }
