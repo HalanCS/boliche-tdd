@@ -18,6 +18,10 @@ public class Jogo {
                 && jogadas[jogadaAtual - 1] + pinos > 10) {
             throw new IllegalArgumentException("Soma das duas primeiras jogadas do 10º frame sem strike não pode exceder 10.");
         }
+        if (frameAtual == 10 && jogadaNoFrame == 3 && jogadas[jogadaAtual - 2] == 10
+                && jogadas[jogadaAtual - 1] < 10 && jogadas[jogadaAtual - 1] + pinos > 10) {
+            throw new IllegalArgumentException("No 10º frame após strike, se a 2ª jogada não for 10, a soma da 2ª e 3ª não pode exceder 10.");
+        }
         jogadas[jogadaAtual++] = pinos;
         if (frameAtual < 10) {
             if (jogadaNoFrame == 1 && pinos < 10) {
