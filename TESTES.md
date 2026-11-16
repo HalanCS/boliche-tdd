@@ -7,13 +7,13 @@ Legenda: `[ ]` pendente · `[x]` feito
 
 ## Partidas de exemplo (pontuação)
 
-- [ ] 1. Sarjeta: 20 jogadas de 0 → 0
-- [ ] 2. Só uns: 20 jogadas de 1 → 20
-- [ ] 3. Um spare: 5, 5, 3 e 17 zeros → 16
-- [ ] 4. Um strike: 10, 3, 4 e 16 zeros → 24
-- [ ] 5. Spare em todos os frames: 21 jogadas de 5 → 150
-- [ ] 6. Jogo perfeito: 12 jogadas de 10 → 300
-- [ ] 7. Partida mista: 10 · 7,3 · 9,0 · 10 · 0,8 · 8,2 · 0,6 · 10 · 10 · 10,8,1 → 167
+- [x] 1. Sarjeta: 20 jogadas de 0 → 0
+- [x] 2. Só uns: 20 jogadas de 1 → 20
+- [x] 3. Um spare: 5, 5, 3 e 17 zeros → 16
+- [x] 4. Um strike: 10, 3, 4 e 16 zeros → 24
+- [x] 5. Spare em todos os frames: 21 jogadas de 5 → 150
+- [x] 6. Jogo perfeito: 12 jogadas de 10 → 300
+- [x] 7. Partida mista: 10 · 7,3 · 9,0 · 10 · 0,8 · 8,2 · 0,6 · 10 · 10 · 10,8,1 → 167
 
 ## V1 – quantidade de pinos inválida
 
